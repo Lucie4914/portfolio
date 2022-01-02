@@ -44,6 +44,9 @@ html, body {
 .panel:nth-child(2n) {
 	background-color: rgba(0, 0, 0, 0.7);
 }
+.panel:last-of-type {
+	background-color: rgba(0, 0, 0, 0.95);
+}
 
 .presentation {
 	display: flex;

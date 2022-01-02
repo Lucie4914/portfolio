@@ -1,0 +1,123 @@
+/* Default */ 
+html, body {
+	margin: 0;
+	padding: 0;
+	scrollbar-width: none;
+}
+
+.main {
+	background-image: url(images/main_zelda_background.jpg);
+	background-attachment: fixed;
+	background-size: cover;
+	text-align: center;
+  font-family: Verdana;
+  width: 100%;
+}
+
+/* Header */
+.presentation {
+	width: 50%;
+	padding: 40px 25% 0 25%;
+	display: flex;
+	flex-direction: row;
+	font-size: 20px;
+}
+
+.header {
+	font-size: 40px;
+	padding-bottom: 20px;
+}
+.text {
+	font-size: 20px;
+}
+
+/* Content */
+.panel {
+	width: 100%;
+	padding: 50px 0;
+	background-color: rgba(0, 0, 0, 0.9);
+	color: white;
+}
+.panel:first-of-type {
+	padding-top: 100px;
+}
+.panel:nth-child(2n) {
+	background-color: rgba(0, 0, 0, 0.7);
+}
+
+.presentation {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.mini_img {
+	width: 20px;
+	border-radius: 3px;
+	vertical-align: middle;
+}
+
+/* Project grid */
+.grid {
+	width: 70%;
+	padding: 50px 15%;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+}
+
+.project {
+	background-color: rgba(0, 0, 0, 0.9);
+	margin: 20px;
+	padding: 30px;
+	position: relative;
+	border-radius: 2%;
+	cursor: pointer;
+}
+.project:nth-child(2n) {
+	background-color: rgba(0, 0, 0, 0.7);
+}
+
+.image {
+	width: 90%;
+	padding: 5%;
+}
+
+/* Cards */
+.front,.back {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+	backface-visibility: hidden;
+	transition: 0.4s ease-in-out;
+	transform-style: preserve-3d;
+	width: 80%;
+	height: 80%;
+	padding: 10%;
+}
+
+.back {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	z-index: 10;
+	transform: rotateY(180deg);
+}
+
+.project:hover .front {
+	transform: rotateY(180deg);
+}
+.project:hover .back {
+	transform: rotateY(0deg);
+}
+
+.features {
+	text-align: left;
+}
+
+/* Contact */
+.link {
+	color: yellow;
+	text-decoration: none;
+}
